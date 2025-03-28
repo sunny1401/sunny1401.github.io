@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunny Joshi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    header, section {
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+    }
+    h1, h2 {
+      color: #1f2937;
+    }
+    nav a, .links a {
+      margin-right: 1rem;
+      text-decoration: none;
+      color: #2563eb;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .button {
+      background: #2563eb;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    ul.skills {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+    }
+  </style>
+</head>
+<body>
+  <header style="text-align: center;">
+    <img src="assets/1713477330074.jpeg" alt="Profile Photo" class="profile-pic" />
+    <h1>Sunny Joshi</h1>
+    <p>Machine Learning Engineer | Computer Vision, MLOps</p>
+    <nav>
+      <a href="projects.html">Projects</a>
+      <a href="photography.html">Photography</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="links" style="margin-top: 1rem;">
+      <a href="mailto:sankranti.joshi@example.com">Email</a>
+      <a href="https://github.com/sunny1401" target="_blank">GitHub</a>
+      <a id="linkedin-link" onclick="handleLinkedInClick()">LinkedIn</a>
+    </div>
+    <script>
+      function handleLinkedInClick() {
+        const link = document.getElementById('linkedin-link');
+        const original = link.innerText;
+        link.innerText = "LinkedIn restricted account due to use of nickname instead of name on passport.";
+        setTimeout(() => {
+          link.innerText = original;
+        }, 5000);
+      }
+    </script>
+  </header>
+
+  <section>
+    <h2>Professional Summary</h2>
+    <ul>
+      <li><strong>Senior Machine Learning Engineer | Digehealth (Mar 2024 – Present):</strong> Multimodal ML for post-operative gut health monitoring.</li>
+      <li><strong>PhD Researcher | University of Edinburgh (Oct 2023 – Dec 2024, discontinued):</strong> Self-supervised learning and large-scale geospatial ML.</li>
+      <li><strong>Applied Science Intern | Roku (Jul 2024 – Sep 2024):</strong> Synthetic data generation using diffusion models.</li>
+      <li><strong>Machine Learning Engineer | Cambrian Robotics (Jan 2024 – Feb 2024):</strong> Segmentation and object detection for robotics.</li>
+      <li><strong>Senior AIML Platform Engineer | GSK (May 2023 – Oct 2023):</strong> DNA classification pipelines on Azure HPC.</li>
+      <li><strong>Senior ML Engineer | Informa Markets (Sep 2022 – Mar 2023):</strong> NLP, MLOps infra, and pricing models.</li>
+      <li><strong>Senior Associate, Data Science | AIG (Apr 2021 – Aug 2022):</strong> Time-series forecasting and ML ops pipelines.</li>
+      <li><strong>ML Engineer | AIG (Jun 2019 – Mar 2021):</strong> DeepAR models and ML experiment reproducibility</li>
+      <li><strong>Graduate Software Developer | Sage Group Plc (Feb 2018 – Mar 2019):</strong> NLP chatbot enhancements using LSTMs.</li>
+    </ul>
+
+    <!-- ✅ Download Resume Button -->
+    <a href="assets/resume.pdf" download class="button">Download Resume</a>
+</section>
+  </section>
+</body>
+</html>
