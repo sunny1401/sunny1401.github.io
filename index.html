@@ -10,23 +10,115 @@
       font-family: 'Inter', sans-serif;
       background: #f9fafb;
       color: #111827;
+      margin: 0;
+      padding: 0;
+    }
+
+    .layout {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
       padding: 2rem;
-      line-height: 1.6;
     }
-    header, section {
-      max-width: 800px;
-      margin: 0 auto 2rem auto;
+
+    .profile {
+      position: sticky;
+      top: 2rem;
+      width: 240px;
+      background: #f3f4f6;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
     }
-    h1, h2 {
-      color: #1f2937;
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
     }
-    nav a, .links a {
+
+    .profile h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .profile p {
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    .links a {
+      display: block;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 0.5rem;
+    }
+
+    .content {
+      flex-grow: 1;
+    }
+
+    nav {
+      margin-bottom: 1rem;
+    }
+
+    nav a {
       margin-right: 1rem;
       text-decoration: none;
       color: #2563eb;
       font-weight: 600;
-      cursor: pointer;
     }
+
+    section {
+      margin-top: 1rem;
+    }
+
+    h2 {
+      color: #1f2937;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-wrapper {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 1rem 0;
+    }
+
+    .timeline-slider {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .timeline-item {
+      min-width: 280px;
+      flex: 0 0 auto;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .timeline-item h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0 0 0.25rem;
+    }
+
+    .timeline-item .duration {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin-bottom: 0.5rem;
+    }
+
     .button {
       background: #2563eb;
       color: #fff;
@@ -36,65 +128,114 @@
       display: inline-block;
       margin-top: 1rem;
     }
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-    }
-    ul.skills {
-      columns: 2;
-      -webkit-columns: 2;
-      -moz-columns: 2;
+
+    @media (max-width: 768px) {
+      .layout {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .profile {
+        position: static;
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <header style="text-align: center;">
-    <img src="assets/1713477330074.jpeg" alt="Profile Photo" class="profile-pic" />
-    <h1>Sunny Joshi</h1>
-    <p>Machine Learning Engineer | Computer Vision, MLOps | Exposure to NLP</p>
-    <nav>
-      <a href="projects.html">Projects</a>
-      <a href="photography.html">Photography</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="links" style="margin-top: 1rem;">
-      <a href="mailto:sankranti.joshi@example.com">Email</a>
-      <a href="https://github.com/sunny1401" target="_blank">GitHub</a>
-    </div>
-<!--       <a href="" target="_blank">LinkedIn</a>
-    </div>
-    <script>
-      function handleLinkedInClick() {
-        const link = document.getElementById('linkedin-link');
-        const original = link.innerText;
-        link.innerText = "LinkedIn randomly keeps restricting account so not using it anymore.";
-        setTimeout(() => {
-          link.innerText = original;
-        }, 5000);
-      }
-    </script> -->
-  </header>
+  <div class="layout">
+    <!-- Left sticky profile -->
+    <aside class="profile">
+      <img src="assets/1713477330074.jpeg" alt="Profile Photo" class="profile-pic" />
+      <h1>Sunny Joshi</h1>
+      <p>Machine Learning Engineer<br />Computer Vision | MLOps | NLP</p>
+      <div class="links">
+        <a href="mailto:sankranti.joshi@example.com">Email</a>
+        <a href="https://github.com/sunny1401" target="_blank">GitHub</a>
+      </div>
+    </aside>
 
-  <section>
-    <h2>Professional Summary</h2>
-    <ul>
-      <li><strong>Senior Machine Learning Engineer - Contract until May 30th 2025| Digehealth (Mar 2025 – Present):</strong> </li>
-      <li><strong>PhD Researcher | University of Edinburgh (Oct 2023 – Dec 2024, discontinued):</strong> Self-supervised learning and large-scale geospatial ML.</li>
-      <li><strong>Applied Science Intern | Roku (Jul 2024 – Sep 2024):</strong> Synthetic data generation using diffusion models.</li>
-      <li><strong>Machine Learning Engineer | Cambrian Robotics (Jan 2024 – Feb 2024):</strong> Segmentation and object detection for robotics.</li>
-      <li><strong>Senior AIML Platform Engineer | GSK (May 2023 – Oct 2023):</strong> DNA classification pipelines on Azure HPC.</li>
-      <li><strong>Senior ML Engineer | Informa Markets (Sep 2022 – Mar 2023):</strong> NLP, MLOps infra, and pricing models.</li>
-      <li><strong>Senior Associate, Data Science | AIG (Apr 2021 – Aug 2022):</strong> Time-series forecasting and ML ops pipelines.</li>
-      <li><strong>ML Engineer | AIG (Jun 2019 – Mar 2021):</strong> DeepAR models and ML experiment reproducibility</li>
-      <li><strong>Graduate Software Developer | Sage Group Plc (Feb 2018 – Mar 2019):</strong> NLP chatbot enhancements using LSTMs.</li>
-    </ul>
+    <!-- Right content -->
+    <main class="content">
+      <nav>
+        <a href="projects.html">Projects</a>
+        <a href="photography.html">Photography</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
+      <section>
+        <h2>Professional Summary</h2>
 
-    <a href="assets/resume.pdf" download class="button">Download Resume</a>
-</section>
-  </section>
+        <div class="timeline-wrapper">
+          <div class="timeline-slider">
+            <div class="timeline-item">
+              <h3>Digehealth</h3>
+              <p><strong>Senior Machine Learning Engineer</strong></p>
+              <p class="duration">Mar 2025 – Present</p>
+              <p>Audio segmentation, YOLOv8, AzureML</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>University of Edinburgh</h3>
+              <p><strong>PhD Researcher</strong></p>
+              <p class="duration">Oct 2023 – Dec 2024 (discontinued)</p>
+              <p>Self-supervised learning, geospatial ML</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Roku</h3>
+              <p><strong>Applied Science Intern</strong></p>
+              <p class="duration">Jul 2024 – Sep 2024</p>
+              <p>Diffusion models, synthetic data generation</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Cambrian Robotics</h3>
+              <p><strong>Machine Learning Engineer</strong></p>
+              <p class="duration">Jan 2024 – Feb 2024</p>
+              <p>Robotics, segmentation, object detection</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>GSK</h3>
+              <p><strong>Senior AIML Platform Engineer</strong></p>
+              <p class="duration">May 2023 – Oct 2023</p>
+              <p>DNA classification, Azure HPC pipelines</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Informa Markets</h3>
+              <p><strong>Senior ML Engineer</strong></p>
+              <p class="duration">Sep 2022 – Mar 2023</p>
+              <p>NLP, MLOps infrastructure, pricing models</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>AIG</h3>
+              <p><strong>Senior Associate, Data Science</strong></p>
+              <p class="duration">Apr 2021 – Aug 2022</p>
+              <p>Forecasting, ML pipelines, time-series modeling</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>AIG</h3>
+              <p><strong>ML Engineer</strong></p>
+              <p class="duration">Jun 2019 – Mar 2021</p>
+              <p>DeepAR models, reproducibility</p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Sage Group Plc</h3>
+              <p><strong>Graduate Software Developer</strong></p>
+              <p class="duration">Feb 2018 – Mar 2019</p>
+              <p>NLP chatbot enhancements using LSTMs</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="assets/resume.pdf" download class="button">Download Resume</a>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
