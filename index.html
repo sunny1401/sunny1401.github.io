@@ -87,19 +87,13 @@
     }
 
     .timeline-wrapper {
-      overflow-x: auto;
-      white-space: nowrap;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       padding: 1rem 0;
     }
 
-    .timeline-slider {
-      display: flex;
-      gap: 1rem;
-    }
-
     .timeline-item {
-      min-width: 280px;
-      flex: 0 0 auto;
       background: white;
       border: 1px solid #e5e7eb;
       border-radius: 10px;
@@ -167,69 +161,67 @@
         <h2>Professional Summary</h2>
 
         <div class="timeline-wrapper">
-          <div class="timeline-slider">
-            <div class="timeline-item">
-              <h3>Digehealth</h3>
-              <p><strong>Senior Machine Learning Engineer</strong></p>
-              <p class="duration">Mar 2025 – Present</p>
-              <p>Audio segmentation, YOLOv8, AzureML</p>
-            </div>
+          <div class="timeline-item">
+            <h3>Digehealth</h3>
+            <p><strong>Senior Machine Learning Engineer</strong></p>
+            <p class="duration">Mar 2025 – Present</p>
+            <p>Audio segmentation, YOLOv8, AzureML</p>
+          </div>
 
-            <div class="timeline-item">
-              <h3>University of Edinburgh</h3>
-              <p><strong>PhD Researcher</strong></p>
-              <p class="duration">Oct 2023 – Dec 2024 (discontinued)</p>
-              <p>Self-supervised learning, geospatial ML</p>
-            </div>
+          <div class="timeline-item">
+            <h3>University of Edinburgh</h3>
+            <p><strong>PhD Researcher</strong></p>
+            <p class="duration">Oct 2023 – Mar 2025 (discontinued)</p>
+            <p>Self-supervised learning, geospatial ML</p>
+          </div>
 
-            <div class="timeline-item">
-              <h3>Roku</h3>
-              <p><strong>Applied Science Intern</strong></p>
-              <p class="duration">Jul 2024 – Sep 2024</p>
-              <p>Diffusion models, synthetic data generation</p>
-            </div>
+          <div class="timeline-item">
+            <h3>Roku</h3>
+            <p><strong>Applied Science Intern</strong></p>
+            <p class="duration">Jul 2024 – Sep 2024</p>
+            <p>Diffusion models, synthetic data generation</p>
+          </div>
 
-            <div class="timeline-item">
-              <h3>Cambrian Robotics</h3>
-              <p><strong>Machine Learning Engineer</strong></p>
-              <p class="duration">Jan 2024 – Feb 2024</p>
-              <p>Robotics, segmentation, object detection</p>
-            </div>
+          <div class="timeline-item">
+            <h3>Cambrian Robotics</h3>
+            <p><strong>Machine Learning Engineer</strong></p>
+            <p class="duration">Jan 2024 – Feb 2024</p>
+            <p>Segmentation, object detection</p>
+          </div>
 
-            <div class="timeline-item">
-              <h3>GSK</h3>
-              <p><strong>Senior AIML Platform Engineer</strong></p>
-              <p class="duration">May 2023 – Oct 2023</p>
-              <p>DNA classification, Azure HPC pipelines</p>
-            </div>
+          <div class="timeline-item">
+            <h3>GSK</h3>
+            <p><strong>Senior AIML Platform Engineer</strong></p>
+            <p class="duration">May 2023 – Oct 2023</p>
+            <p>DNA classification, Azure HPC pipelines</p>
+          </div>
 
-            <div class="timeline-item">
-              <h3>Informa Markets</h3>
-              <p><strong>Senior ML Engineer</strong></p>
-              <p class="duration">Sep 2022 – Mar 2023</p>
-              <p>NLP, MLOps infrastructure, pricing models</p>
-            </div>
+          <div class="timeline-item">
+            <h3>Informa Markets</h3>
+            <p><strong>Senior ML Engineer</strong></p>
+            <p class="duration">Sep 2022 – Mar 2023</p>
+            <p>NLP, MLOps infrastructure, pricing models</p>
+          </div>
 
-            <div class="timeline-item">
-              <h3>AIG</h3>
-              <p><strong>Senior Associate, Data Science</strong></p>
-              <p class="duration">Apr 2021 – Aug 2022</p>
-              <p>Forecasting, ML pipelines, time-series modeling</p>
-            </div>
+          <div class="timeline-item">
+            <h3>AIG</h3>
+            <p><strong>Senior Associate, Data Science</strong></p>
+            <p class="duration">Apr 2021 – Aug 2022</p>
+            <p>Forecasting, ML pipelines, time-series modeling</p>
+          </div>
 
-            <div class="timeline-item">
-              <h3>AIG</h3>
-              <p><strong>ML Engineer</strong></p>
-              <p class="duration">Jun 2019 – Mar 2021</p>
-              <p>DeepAR models, reproducibility</p>
-            </div>
+          <div class="timeline-item">
+            <h3>AIG</h3>
+            <p><strong>ML Engineer</strong></p>
+            <p class="duration">Jun 2019 – Mar 2021</p>
+            <p>DeepAR models, model reproducibility operations</p>
+          </div>
 
-            <div class="timeline-item">
-              <h3>Sage Group Plc</h3>
-              <p><strong>Graduate Software Developer</strong></p>
-              <p class="duration">Feb 2018 – Mar 2019</p>
-              <p>NLP chatbot enhancements using LSTMs</p>
-            </div>
+          <div class="timeline-item">
+            <h3>Sage Group Plc</h3>
+            <p><strong>Graduate Software Developer</strong></p>
+            <p class="duration">Feb 2018 – Mar 2019</p>
+            <p>NLP chatbot enhancements using LSTMs, CRFs</p>
           </div>
         </div>
 
