@@ -96,6 +96,56 @@
       margin-bottom: 0.5rem;
     }
 
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+
+    .role-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+
+    .role-card h3 {
+      font-size: 1.05rem;
+      margin: 0;
+    }
+
+    .role-title {
+      font-weight: 600;
+      margin: 0.35rem 0;
+    }
+
+    .role-dates {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin: 0 0 1rem;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .skill-list li {
+      background: #eff6ff;
+      color: #1e40af;
+      border: 1px solid #dbeafe;
+      border-radius: 5px;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.8rem;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
     .collections {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -153,7 +203,8 @@
     }
 
     @media (max-width: 768px) {
-      .collections {
+      .collections,
+      .role-grid {
         grid-template-columns: 1fr;
       }
 
@@ -194,11 +245,116 @@
         <!-- <a href="#projects">Projects</a> -->
         <!-- <a href="#blog">Blog</a> -->
         <!-- <a href="#papers">Papers</a> -->
+        <a href="#roles">Roles &amp; Skills</a>
         <a href="https://www.instagram.com/the.way.i.see.the.thing/">Photography</a>
         <a href="contact.html">Contact</a>
       </nav>
 
       <a href="assets/resume.pdf" download class="button">Download CV</a>
+
+      <section id="roles" aria-labelledby="roles-heading">
+        <h2 id="roles-heading">Roles &amp; Skills</h2>
+        <div class="role-grid">
+          <article class="role-card">
+            <h3>PlayStation</h3>
+            <p class="role-title">Senior Machine Learning Engineer</p>
+            <p class="role-dates">Jul 2025 – Present</p>
+            <ul class="skill-list" aria-label="Skills">
+              <li>Video understanding</li>
+              <li>Vision-language models</li>
+              <li>Automated annotation</li>
+              <li>Object detection</li>
+              <li>Agent skills (Claude / Codex)</li>
+              <li>MLOps (Databricks / MLflow)</li>
+              <li>Model serving (vLLM)</li>
+            </ul>
+          </article>
+
+          <article class="role-card">
+            <h3>Self-employed Contract</h3>
+            <p class="role-title">Senior Machine Learning Engineer</p>
+            <p class="role-dates">Mar 2025 – May 2025</p>
+            <ul class="skill-list" aria-label="Skills">
+              <li>Audio segmentation</li>
+              <li>YOLO</li>
+              <li>Signal denoising</li>
+              <li>Hyperparameter optimisation</li>
+              <li>Factor analysis</li>
+              <li>Azure ML</li>
+            </ul>
+          </article>
+
+          <article class="role-card">
+            <h3>Sense CDT</h3>
+            <p class="role-title">Research Student in Earth Observation Computer Vision</p>
+            <p class="role-dates">Oct 2023 – Mar 2025</p>
+            <ul class="skill-list" aria-label="Skills">
+              <li>Self-supervised learning (MAE)</li>
+              <li>Multimodal learning</li>
+              <li>Vision Transformers</li>
+              <li>Parameter-efficient adaptation</li>
+              <li>Geospatial ML</li>
+              <li>HPC training</li>
+            </ul>
+          </article>
+
+          <article class="role-card">
+            <h3>Roku</h3>
+            <p class="role-title">Applied Science Intern</p>
+            <p class="role-dates">Jul 2024 – Sep 2024</p>
+            <ul class="skill-list" aria-label="Skills">
+              <li>Diffusion models</li>
+              <li>Synthetic data generation</li>
+              <li>ControlNet</li>
+              <li>Inpainting &amp; outpainting</li>
+              <li>Retrieval-augmented generation</li>
+              <li>Dataset curation</li>
+            </ul>
+          </article>
+
+          <article class="role-card">
+            <h3>GSK</h3>
+            <p class="role-title">Senior AIML Platform Engineer</p>
+            <p class="role-dates">May 2023 – Oct 2023</p>
+            <ul class="skill-list" aria-label="Skills">
+              <li>ML platform engineering</li>
+              <li>Azure HPC</li>
+              <li>Sequence classification</li>
+              <li>Model fine-tuning</li>
+              <li>Model pruning</li>
+              <li>Model compression</li>
+            </ul>
+          </article>
+
+          <article class="role-card">
+            <h3>Informa Markets</h3>
+            <p class="role-title">Senior Machine Learning Engineer</p>
+            <p class="role-dates">Sep 2022 – Mar 2023</p>
+            <ul class="skill-list" aria-label="Skills">
+              <li>NLP</li>
+              <li>Topic modelling (LDA)</li>
+              <li>Document embeddings</li>
+              <li>BERT</li>
+              <li>Data &amp; model versioning</li>
+              <li>CI/CD</li>
+            </ul>
+          </article>
+
+          <article class="role-card">
+            <h3>AIG</h3>
+            <p class="role-title">Machine Learning Engineer → Senior Associate I, Data Science</p>
+            <p class="role-dates">Jun 2019 – Aug 2022</p>
+            <ul class="skill-list" aria-label="Skills">
+              <li>Time-series forecasting (DeepAR)</li>
+              <li>Geospatial analytics</li>
+              <li>Feature engineering</li>
+              <li>Experiment tracking (MLflow)</li>
+              <li>Data leakage detection</li>
+              <li>Django</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
       <div class="collections">
         <!-- Projects: uncomment this section and its navigation link when content is ready.
