@@ -86,11 +86,6 @@
       font-weight: 600;
     }
 
-    .nav-status {
-      color: #6b7280;
-      font-weight: 600;
-    }
-
     section {
       margin-top: 1rem;
     }
@@ -147,40 +142,6 @@
       font-size: 0.9rem;
     }
 
-    .timeline-wrapper {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1rem;
-      padding: 1rem 0;
-    }
-  
-    @media (max-width: 768px) {
-      .collections,
-      .timeline-wrapper {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .timeline-item {
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 1rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-
-    .timeline-item h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      margin: 0 0 0.25rem;
-    }
-
-    .timeline-item .duration {
-      font-size: 0.85rem;
-      color: #6b7280;
-      margin-bottom: 0.5rem;
-    }
-
     .button {
       background: #2563eb;
       color: #fff;
@@ -192,6 +153,10 @@
     }
 
     @media (max-width: 768px) {
+      .collections {
+        grid-template-columns: 1fr;
+      }
+
       .layout {
         flex-direction: column;
         padding: 1rem;
@@ -214,135 +179,49 @@
     <aside class="profile">
       <img src="assets/1713477330074.jpeg" alt="Sankranti Joshi" class="profile-pic" />
       <h1>Sankranti Joshi</h1>
-      <p>Senior Machine Learning Engineer, PlayStation<br />PhD Researcher, University of Exeter<br />Computer Vision | Machine Translation</p>
+      <p>Senior Machine Learning Engineer, PlayStation<br />PhD Researcher, University of Exeter</p>
+      <p>Computer Vision · Multimodal Learning · Self-Supervised Learning · Agentic AI · MLOps</p>
       <div class="links">
         <a href="mailto:sunnyjoshi1401@gmail.com">Email</a>
         <a href="https://github.com/sunny1401" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://registry.opendata.aws/ssl4eo-multi-product-data/" target="_blank" rel="noopener noreferrer">Amazon Open Data</a>
       </div>
-      <a href="assets/resume.pdf" download class="button">Download CV</a>
     </aside>
 
     <!-- Right content -->
     <main class="content">
       <nav aria-label="Main navigation">
-        <a href="#projects">Projects <span class="nav-status">[under dev]</span></a>
-        <a href="#blog">Blog</a>
-        <a href="#papers">Papers</a>
-        <a href="#experience">Experience</a>
+        <!-- <a href="#projects">Projects</a> -->
+        <!-- <a href="#blog">Blog</a> -->
+        <!-- <a href="#papers">Papers</a> -->
         <a href="https://www.instagram.com/the.way.i.see.the.thing/">Photography</a>
         <a href="contact.html">Contact</a>
       </nav>
 
+      <a href="assets/resume.pdf" download class="button">Download CV</a>
+
       <div class="collections">
-        <!-- <section id="projects" class="collection" aria-labelledby="projects-heading">
+        <!-- Projects: uncomment this section and its navigation link when content is ready.
+        <section id="projects" class="collection" aria-labelledby="projects-heading">
           <h2 id="projects-heading">Projects</h2>
-          <!-- Replace the empty state with project articles when ready. -->
           <p class="empty-state">[under dev]</p>
-        </section> -->
+        </section>
+        -->
 
-        <!-- <section id="blog" class="collection" aria-labelledby="blog-heading">
+        <!-- Blog: uncomment this section and its navigation link when content is ready.
+        <section id="blog" class="collection" aria-labelledby="blog-heading">
           <h2 id="blog-heading">Blog</h2>
-          <!-- Replace the empty state with dated articles linking to blog posts. -->
           <p class="empty-state">No posts yet.</p>
-        </section> -->
+        </section>
+        -->
 
-        <!-- <section id="papers" class="collection" aria-labelledby="papers-heading">
+        <!-- Papers: uncomment this section and its navigation link when content is ready.
+        <section id="papers" class="collection" aria-labelledby="papers-heading">
           <h2 id="papers-heading">Papers</h2>
-          <!-- Replace the empty state with paper articles when available. -->
           <p class="empty-state">No papers listed yet.</p>
         </section>
-      </div> -->
-
-      <section id="experience" aria-labelledby="experience-heading">
-        <h2 id="experience-heading">Industry &amp; Research Experience</h2>
-
-        <div class="timeline-wrapper">
-          <div class="timeline-item">
-            <h3>PlayStation</h3>
-            <p><strong>Senior Machine Learning Engineer</strong></p>
-            <p class="duration">Jul 2025 – Present</p>
-            <p>Proposed and developed a working approach to gameplay video auto-labelling and segmentation, securing acceptance into PlayStation's accelerator programme. Leading the nine-month project to build a shared ontology dataset for downstream model tuning.</p>
-            <p>Built an inference-based QA pipeline to identify characters and assets and assess scene composition in gameplay footage. Developed game screen clustering using vision-language models. Currently developing a video reasoning pipeline for gameplay analysis.</p>
-            <p>Created reusable skills for Claude and Codex agents to refactor and reuse code while preserving repository structure as new code is added, reducing token usage from millions to tens of thousands. Developed a skills-based agent workflow to prepare repositories for publishing as Databricks Asset Bundles, streamlining team onboarding.</p>
-            <p>Built Databricks production pipelines for training and inference across menu/gameplay classification, HUD detection and level classification. Developed Delta Tables for streaming data collection and feature engineering, and MLflow model serving endpoints. Developing model serving with vLLM.</p>
-          </div>
-          
-          <div class="timeline-item">
-            <h3>Self-employed Contract</h3>
-            <p><strong>Senior Machine Learning Engineer</strong></p>
-            <p class="duration">Mar 2025 – May 2025</p>
-            <p>Sole ML engineer at a health startup, building training and inference pipelines from scratch. Improved YOLO-based audio segmentation by 15+ mAP points through data processing, noise cancellation and hyperparameter tuning.</p>
-            <p>Implemented reproducible Azure ML training workflows and factor analysis linking segmentation predictions to gut health indicators.</p>
-          </div>
-
-          <div class="timeline-item">
-            <h3>Sense CDT</h3>
-            <p><strong>Research Student in Earth Observation Computer Vision</strong></p>
-            <p class="duration">Oct 2023 – Mar 2025</p>
-            <p>Combined Landsat and Sentinel imagery into a multimodal dataset contributed to <a href="https://registry.opendata.aws/ssl4eo-multi-product-data/" target="_blank" rel="noopener noreferrer">Amazon Open Data Sponsorship</a>. Developed a wavelength-conditioned adapter for frozen Vision Transformer backbones.</p>
-            <p>Trained a vision foundation model from scratch using MAE-based self-supervised learning on multi-sensor satellite data, deploying on HPC and Kubernetes clusters.</p>
-          </div>
-
-          <div class="timeline-item">
-            <h3>Roku</h3>
-            <p><strong>Applied Science Intern</strong></p>
-            <p class="duration">Jul 2024 – Sep 2024</p>
-            <p>Generated synthetic training data with Stable Diffusion, ControlNet and inpainting/outpainting for YOLOX. Developed a RAG pipeline comparing 3,000+ synthetic and real images to refine prompts and improve data quality.</p>
-          </div>
-
-          <div class="timeline-item">
-            <h3>GSK</h3>
-            <p><strong>Senior AIML Platform Engineer</strong></p>
-            <p class="duration">May 2023 – Oct 2023</p>
-            <p>Designed scalable ML platform pipelines on Azure HPC and cloud services. Built an end-to-end DNA sequence classification pipeline using Hugging Face, including model fine-tuning, pruning and compression.</p>
-          </div>
-
-          <div class="timeline-item">
-            <h3>Informa Markets</h3>
-            <p><strong>Senior Machine Learning Engineer</strong></p>
-            <p class="duration">Sep 2022 – Mar 2023</p>
-            <p>Developed an LDA-guided BERT pipeline for document embeddings, improving NLP model accuracy by 25%. Built MLOps infrastructure covering data and model versioning, dependency management and CI/CD.</p>
-          </div>
-
-          <div class="timeline-item">
-            <h3>AIG</h3>
-            <p><strong>Senior Associate I, Data Science</strong></p>
-            <p class="duration">Jun 2019 – Aug 2022</p>
-            <p>Promoted from Machine Learning Engineer in Apr 2021. Built a geospatial Django platform for underwriting and reproducible feature engineering pipelines with MLflow.</p>
-            <p>Refactored MXNet DeepAR forecasting and resolved a data leakage issue involving future covariates.</p>
-          </div>
-        </div>
-
-      </section>
-
-      <section>
-        <h2>Technical Skills</h2>
-        <p><strong>Programming &amp; Tools:</strong> Python, PyTorch, TensorFlow, Bash, Docker, PyTorch Lightning, Weights &amp; Biases, Slurm, HPC, Poetry, scikit-learn, XGBoost, Hugging Face, DeepSpeed and Kubernetes (basic).</p>
-        <p><strong>Machine Learning &amp; AI:</strong> Transformers, CNNs, RNNs/LSTMs, MAE, VAE, language models, contrastive learning and diffusion models.</p>
-        <p><strong>Cloud &amp; MLOps:</strong> AWS (SageMaker, EC2, RDS), Azure, Databricks, MLflow, vLLM serving, CI/CD, model versioning and feature engineering.</p>
-      </section>
-
-      <section>
-        <h2>Education</h2>
-        <div class="timeline-wrapper">
-          <div class="timeline-item">
-            <!-- <h3>University of Exeter</h3>
-            <p>PhD in Machine Learning and Geophysics</p>
-            <p class="duration">2026 – Present</p>
-            <p>Supervisor: <a href="https://computerscience.exeter.ac.uk/people/profile/index.php?username=cl535" target="_blank" rel="noopener noreferrer">Dr Chunbo Luo</a></p> -->
-          </div>
-          <div class="timeline-item">
-            <h3>University of Edinburgh</h3>
-            <p>MSc in AI</p>
-            <p class="duration">2016 – 2017</p>
-          </div>
-          <div class="timeline-item">
-            <h3>Manipal Institute of Technology</h3>
-            <p>MTech in Software Engineering</p>
-            <p class="duration">2012 – 2014</p>
-          </div>
-        </div>
-      </section>
+        -->
+      </div>
     </main>
   </div>
 </body>
